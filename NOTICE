@@ -1,0 +1,10 @@
+Cubes  
+J. Tetteroo, 2016
+
+
+This project includes software from the Fuchsia project under BSD license (see gfx/ and gfx/LICENSE).
+
+This project includes software by Stephan Soller and Tobias Malmsheimer under MIT license (see 3d\_math.h).
+
+This project contains algorithms based on code from http://www.sunshine2k.de/coding/java/TriangleRasterization/TriangleRasterization.html under MIT license (see util.c). 
+

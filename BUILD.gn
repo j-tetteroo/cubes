@@ -1,0 +1,13 @@
+executable("cubes") {
+  output_name = "cubes"
+
+  sources = [
+    "raster.c",
+    "util.c",
+    "gfx/gfx.c"
+  ]
+
+  libs = [ "mxio", "magenta" ]
+
+  include_dirs = [ "gfx/include" ]
+}
