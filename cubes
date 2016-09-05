@@ -1,0 +1,11 @@
+{
+    "labels": [
+        "//apps/cubes"
+    ],
+    "binaries": [
+        {
+            "binary": "cubes",
+            "bootfs_path": "apps/cubes"
+        }
+    ]
+}
