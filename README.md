@@ -11,11 +11,11 @@
 
 4. Clone the cubes repo in **$FUCHSIAROOT/apps**:
 
-    `cd apps`
-    
-    `git clone https://github.com/j-tetteroo/cubes/`
-    
-    `cd ..`
+    ```
+    cd apps
+    git clone https://github.com/j-tetteroo/cubes/
+    cd ..
+    ```
 
 5. Copy the file **./apps/cubes/cubes** to directory **./packages/gn/**
 
