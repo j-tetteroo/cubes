@@ -1,5 +1,7 @@
 ## Simple cube rasterizer for Fuchsia running in QEMU
 
+![screenshot](qemu.png)
+
 ### Build instructions for QEMU x86-64
 
 1. Build Fuchsia and Magenta for QEMU x86-64 according to instructions here:
