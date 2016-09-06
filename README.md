@@ -26,7 +26,7 @@
 
 6. Run the command to generate the ninja files:
 
-    `./packages/gn/gen.py --target=x86-64 --modules=cubes`
+    `./packages/gn/gen.py --target_cpu=x86-64 --modules=cubes`
 
 7. Run Ninja to build the program:
 
