@@ -239,17 +239,6 @@ int main(int argc, char** argv) {
     }
 
     // z-sort cubes
-    /*
-    for (int i=0;i<NUM_CUBES;i++) {
-        for(int j=0;j<NUM_CUBES;j++) {
-            if (ca[i]->position.z < ca[j]->position.z) {
-                ctemp = ca[i];
-                ca[i] = ca[j];
-                ca[j] = ctemp;
-            }
-        }
-    }
-    */
     for (int i=1;i<NUM_CUBES;i++) {
         for(int j=0;j<NUM_CUBES-1;j++) {
             if (ca[j]->position.z > ca[j+1]->position.z) {
@@ -266,13 +255,6 @@ int main(int argc, char** argv) {
         draw_cube(surface, ca[i]);
     }
     
-  /*
-    gfx_fillrect(surface, v1.x-50,v1.y-50,100,100, 0x00FF0000);
-    gfx_fillrect(surface, v2.x-50,v2.y-50,100,100, 0x0000FF00);
-    gfx_fillrect(surface, v3.x-50,v3.y-50,100,100, 0x000000FF);
-    gfx_fillrect(surface, v4.x-50,v4.y-50,100,100, 0x0000FFFF);
-    */
-
     print_fps(surface, framerate);
 
     flush(persist_fd);

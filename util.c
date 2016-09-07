@@ -29,18 +29,25 @@ void fill_triang_top(gfx_surface *surface, vec3_t *v1, vec3_t *v2, vec3_t *v3, u
 
   // v1, v2, v3 already have screen coords
   unsigned int cur_y;
-  float v2v1 = (v2->x - v1->x) / (v2->y - v1->y);
-  float v3v1 = (v3->x - v1->x) / (v3->y - v1->y);
+  float v2v1;
+  float v3v1;
+
+  v2v1 = (v2->x - v1->x) / (v2->y - v1->y);
+  v3v1 = (v3->x - v1->x) / (v3->y - v1->y);
+
 
   float x1 = v1->x; // v1 = top vec3_t
   float x2 = v1->x;
+  unsigned int yy = (unsigned int)floor(v2->y);
 
-  for (cur_y = (unsigned int)v1->y; cur_y <= (unsigned int)v2->y; cur_y++) {
+  for (cur_y = (unsigned int)v1->y; cur_y < yy; cur_y++) {
     gfx_line(surface, x1, cur_y, x2, cur_y, color);
     x1 += v2v1;
     x2 += v3v1;
   }
-
+  if (cur_y == yy) {
+    gfx_line(surface, (unsigned int)v2->x, yy, (unsigned int)v3->x, yy, color);
+  }
 }
 
 void fill_triang_bottom(gfx_surface *surface, vec3_t *v1, vec3_t *v2, vec3_t *v3, unsigned int color) {
@@ -52,6 +59,7 @@ void fill_triang_bottom(gfx_surface *surface, vec3_t *v1, vec3_t *v2, vec3_t *v3
 
   float x1 = v3->x; // v3 = bottom vec3_t
   float x2 = v3->x;
+
 
   for (cur_y = (unsigned int)v3->y; cur_y > (unsigned int)v1->y; cur_y--) {
     gfx_line(surface, x1, cur_y, x2, cur_y, color);
