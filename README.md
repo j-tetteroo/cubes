@@ -1,5 +1,7 @@
 ## Simple cube rasterizer for Fuchsia running in QEMU
 
+![screenshot](qemu.png)
+
 ### Build instructions for QEMU x86-64
 
 1. Build Fuchsia and Magenta for QEMU x86-64 according to instructions here:
@@ -24,7 +26,7 @@
 
 6. Run the command to generate the ninja files:
 
-    `./packages/gn/gen.py --target=x86-64 --modules=cubes`
+    `./packages/gn/gen.py --target_cpu=x86-64 --modules=cubes`
 
 7. Run Ninja to build the program:
 
